@@ -279,7 +279,7 @@ extension ViewController: WKUIDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let requestUrl = navigationAction.request.url {
             if let requestHost = requestUrl.host {
-                if (requestHost.range(of: allowedOrigin) != nil ) {
+                if (allowedOrigins.filter({ requestHost.range(of: $0) != nil }).count > 0) {
                     decisionHandler(.allow)
                 } else {
                     decisionHandler(.cancel)

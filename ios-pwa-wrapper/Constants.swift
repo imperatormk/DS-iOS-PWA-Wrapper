@@ -9,13 +9,11 @@
 import UIKit
 
 // Basic App-/WebView-configuration
-let appTitle = "iOS PWA Wrapper"
-let webAppUrl = URL(string: "https://www.leasingrechnen.at")
-let allowedOrigin = "leasingrechnen.at"
-let menuButtonTitle = NSLocalizedString("menu", comment: "")
-let menuButtonJavascript = """
-    $('.button-collapse').sideNav('show');
-"""
+let appTitle = "Dateswiper"
+let webAppUrl = URL(string: "https://development.dateswiper.com")
+let allowedOrigins = ["development.dateswiper.com", "accounts.google.com", "appleid.apple.com"]
+let menuButtonTitle = ""
+let menuButtonJavascript = ""
 let useUserAgentPostfix = true
 let userAgentPostfix = "iOSApp"
 let useCustomUserAgent = false
@@ -31,9 +29,7 @@ let enableBounceWhenScrolling = true
 let changeMenuButtonOnWideScreens = false
 let wideScreenMinWidth = CGFloat(993) // your CSS Media Query px-breakpoint
 let alternateRightButtonTitle = NSLocalizedString("share", comment: "")
-let alternateRightButtonJavascript = """
-    $('#share-link').click();
-"""
+let alternateRightButtonJavascript = ""
 
 // Colors & Styles
 let useLightStatusBarStyle = true
